@@ -1,4 +1,4 @@
-#include <AppFramework/Application.h>
+#include "AppFramework/Application.h"
 
 #include <stdexcept>
 #include <array>
@@ -40,7 +40,7 @@ namespace VulkanEngineApplication
 
 		if (vkCreatePipelineLayout(device.device(), &pipelineLayoutInfo, nullptr, &pipelineLayout) != VK_SUCCESS)
 		{
-			throw std::runtime_error("Failed to create Pipeline Layout!\n");
+			throw std::runtime_error("Application::createPipelineLayout(): Failed to create Pipeline Layout!\n");
 		}
 	}
 
