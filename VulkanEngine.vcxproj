@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\AppFramework\Application.cpp" />
+    <ClCompile Include="src\AppFramework\VulkanEngineApplication.cpp" />
     <ClCompile Include="src\Device\VulkanEngineDevice.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Mesh\Mesh.cpp" />
@@ -28,7 +28,7 @@
     <ClCompile Include="src\Windowing\VulkanEngineWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\AppFramework\Application.h" />
+    <ClInclude Include="src\AppFramework\VulkanEngineApplication.h" />
     <ClInclude Include="src\Device\VulkanEngineDevice.h" />
     <ClInclude Include="src\Mesh\Mesh.h" />
     <ClInclude Include="src\Pipeline\VulkanEnginePipeline.h" />
@@ -143,12 +143,12 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\Users\keena\source\repos\VulkanEngine\src;C:\Users\keena\source\repos\VulkanEngine\Dependencies\glm;C:\Users\keena\source\repos\VulkanEngine\Dependencies\glfw-3.3.4.bin.WIN64\include;C:\VulkanSDK\1.2.189.1\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\src;$(ProjectDir)\Dependencies\glm;$(ProjectDir)\Dependencies\glfw-3.3.4.bin.WIN64\include;C:\VulkanSDK\1.2.189.1\Include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\VulkanSDK\1.2.189.1\Lib;C:\Users\keena\source\repos\VulkanEngine\Dependencies\glfw-3.3.4.bin.WIN64\lib-vc2019</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\VulkanSDK\1.2.189.1\Lib;$(ProjectDir)\Dependencies\glfw-3.3.4.bin.WIN64\lib-vc2019</AdditionalLibraryDirectories>
       <AdditionalDependencies>vulkan-1.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

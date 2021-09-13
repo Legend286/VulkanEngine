@@ -28,9 +28,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\AppFramework\Application.h">
-      <Filter>AppFramework</Filter>
-    </ClInclude>
     <ClInclude Include="src\Windowing\VulkanEngineWindow.h">
       <Filter>Windowing</Filter>
     </ClInclude>
@@ -46,11 +43,11 @@
     <ClInclude Include="src\Mesh\Mesh.h">
       <Filter>Mesh</Filter>
     </ClInclude>
+    <ClInclude Include="src\AppFramework\VulkanEngineApplication.h">
+      <Filter>AppFramework</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\AppFramework\Application.cpp">
-      <Filter>AppFramework</Filter>
-    </ClCompile>
     <ClCompile Include="src\Windowing\VulkanEngineWindow.cpp">
       <Filter>Windowing</Filter>
     </ClCompile>
@@ -66,6 +63,9 @@
     </ClCompile>
     <ClCompile Include="src\Mesh\Mesh.cpp">
       <Filter>Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AppFramework\VulkanEngineApplication.cpp">
+      <Filter>AppFramework</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

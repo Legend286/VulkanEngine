@@ -1,4 +1,4 @@
-#include "AppFramework/Application.h"
+#include "AppFramework/VulkanEngineApplication.h"
 
 #include <stdexcept>
 #include <array>
@@ -17,7 +17,7 @@ namespace VulkanEngineApplication
 		vkDestroyPipelineLayout(device.device(), pipelineLayout, nullptr);
 	}
 
-	void Application::run()
+	void Application::runApplication()
 	{
 		while (!window.shouldClose())
 		{

@@ -1,4 +1,4 @@
-#include "AppFramework/Application.h"
+#include "AppFramework/VulkanEngineApplication.h"
 
 #include <cstdlib>
 #include <iostream>
@@ -10,7 +10,7 @@ int main()
 
 	try 
 	{
-		application.run();
+		application.runApplication();
 	}
 	catch (const std::exception &e)
 	{

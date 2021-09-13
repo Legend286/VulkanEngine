@@ -24,7 +24,7 @@ namespace VulkanEngineApplication
 		Application(const Application&) = delete;
 		Application& operator=(const Application&) = delete;
 
-		void run();
+		void runApplication();
 
 	private:
 

@@ -29,7 +29,7 @@ namespace VulkanEngine
 	{
 		if (glfwCreateWindowSurface(instance, window, nullptr, surface) != VK_SUCCESS) 
 		{
-			throw std::runtime_error("VulkanEngineWindow::createWindowSurface: Failed to create window surface.\n");
+			throw std::runtime_error("VulkanEngineWindow::createWindowSurface(): Failed to create window surface!\n");
 		}
 	}
 }
