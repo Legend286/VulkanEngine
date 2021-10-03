@@ -2,11 +2,14 @@
 
 #include <stdexcept>
 #include <array>
+#include <cstdlib>
+#include <iostream>
 
 namespace VulkanEngineApplication
 {
 	Application::Application()
 	{
+		loadModels();
 		createPipelineLayout();
 		createPipeline();
 		createCommandBuffers();
@@ -94,7 +97,8 @@ namespace VulkanEngineApplication
 
 			pipeline->bind(commandBuffers[i]);
 
-			vkCmdDraw(commandBuffers[i], 3, 1, 0, 0);
+			mesh->bind(commandBuffers[i]);
+			mesh->draw(commandBuffers[i]);
 
 			vkCmdEndRenderPass(commandBuffers[i]);
 			if (vkEndCommandBuffer(commandBuffers[i]) != VK_SUCCESS)
@@ -121,4 +125,34 @@ namespace VulkanEngineApplication
 			throw std::runtime_error("Application::drawFrame(): Failed to present SwapChain image! \n");
 		}
 	}
+
+	void Application::loadModels()
+	{
+		std::vector<Mesh::Vertex> vertices {
+			{ {  0.5f, -0.5f } },
+			{ {  0.5f,  0.5f } },
+			{ { -0.5f,  0.5f } }
+		};
+		mesh = std::make_unique<Mesh>(device, vertices);
+
+	}
+}
+
+int main() // actual main function that runs our application.
+{
+	VulkanEngineApplication::Application application{};
+
+	try
+	{
+		application.runApplication();
+		//run application
+		std::cout << "int main(): Running Application VulkanEngine." << std::endl;
+	}
+	catch (const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+		return EXIT_FAILURE;
+	}
+
+	return EXIT_SUCCESS;
 }

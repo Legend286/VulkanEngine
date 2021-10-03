@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Device/VulkanEngineDevice.h"
+#include "Device/VulkanDevice.h"
 
 // vulkan headers
 #include <vulkan/vulkan.h>
@@ -15,7 +15,7 @@ class VulkanEngineSwapChain {
  public:
   static constexpr int MAX_FRAMES_IN_FLIGHT = 2;
 
-  VulkanEngineSwapChain(VulkanEngineDevice &deviceRef, VkExtent2D windowExtent);
+  VulkanEngineSwapChain(VulkanDevice &deviceRef, VkExtent2D windowExtent);
   ~VulkanEngineSwapChain();
 
   VulkanEngineSwapChain(const VulkanEngineSwapChain &) = delete;
@@ -65,7 +65,7 @@ class VulkanEngineSwapChain {
   std::vector<VkImage> swapChainImages;
   std::vector<VkImageView> swapChainImageViews;
 
-  VulkanEngineDevice &device;
+  VulkanDevice &device;
   VkExtent2D windowExtent;
 
   VkSwapchainKHR swapChain;

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Device/VulkanEngineDevice.h"
+#include "Device/VulkanDevice.h"
 
 #include <string>
 #include <vector>
@@ -26,7 +26,7 @@ namespace VulkanEngine
 	{
 	public:
 		VulkanEnginePipeline(
-			VulkanEngineDevice& device,
+			VulkanDevice& device,
 			const std::string& vertFilepath,
 			const std::string& fragFilepath, 
 			const PipelineConfigInfo& configInfo);
@@ -49,7 +49,7 @@ namespace VulkanEngine
 
 		void createShaderModule(const std::vector<char>& code, VkShaderModule* shaderModule);
 
-		VulkanEngineDevice& vulkanEngineDevice;
+		VulkanDevice& vulkanEngineDevice;
 		
 		VkPipeline graphicsPipeline;
 		VkShaderModule vertShaderModule;

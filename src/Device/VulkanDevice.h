@@ -22,7 +22,7 @@ struct QueueFamilyIndices {
   bool isComplete() { return graphicsFamilyHasValue && presentFamilyHasValue; }
 };
 
-class VulkanEngineDevice {
+class VulkanDevice {
 public:
 #ifdef NDEBUG
     const bool enableValidationLayers = false;
@@ -30,14 +30,14 @@ public:
     const bool enableValidationLayers = true;
 #endif
 
-    VulkanEngineDevice(VulkanEngineWindow& window);
-    ~VulkanEngineDevice();
+    VulkanDevice(VulkanEngineWindow& window);
+    ~VulkanDevice();
 
   // Not copyable or movable
-  VulkanEngineDevice(const VulkanEngineDevice &) = delete;
-  void operator=(const VulkanEngineDevice &) = delete;
-  VulkanEngineDevice(VulkanEngineDevice &&) = delete;
-  VulkanEngineDevice &operator=(VulkanEngineDevice &&) = delete;
+  VulkanDevice(const VulkanDevice &) = delete;
+  void operator=(const VulkanDevice &) = delete;
+  VulkanDevice(VulkanDevice &&) = delete;
+  VulkanDevice &operator=(VulkanDevice &&) = delete;
 
   VkCommandPool getCommandPool() { return commandPool; }
   VkDevice device() { return device_; }

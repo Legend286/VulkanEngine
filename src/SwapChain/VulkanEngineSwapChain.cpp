@@ -11,7 +11,7 @@
 
 namespace VulkanEngine {
 
-VulkanEngineSwapChain::VulkanEngineSwapChain(VulkanEngineDevice &deviceRef, VkExtent2D extent)
+VulkanEngineSwapChain::VulkanEngineSwapChain(VulkanDevice &deviceRef, VkExtent2D extent)
     : device{deviceRef}, windowExtent{extent} {
   createSwapChain();
   createImageViews();

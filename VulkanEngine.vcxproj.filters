@@ -34,9 +34,6 @@
     <ClInclude Include="src\Pipeline\VulkanEnginePipeline.h">
       <Filter>Pipeline</Filter>
     </ClInclude>
-    <ClInclude Include="src\Device\VulkanEngineDevice.h">
-      <Filter>Device</Filter>
-    </ClInclude>
     <ClInclude Include="src\SwapChain\VulkanEngineSwapChain.h">
       <Filter>SwapChain</Filter>
     </ClInclude>
@@ -46,17 +43,16 @@
     <ClInclude Include="src\AppFramework\VulkanEngineApplication.h">
       <Filter>AppFramework</Filter>
     </ClInclude>
+    <ClInclude Include="src\Device\VulkanDevice.h">
+      <Filter>Device</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Windowing\VulkanEngineWindow.cpp">
       <Filter>Windowing</Filter>
     </ClCompile>
-    <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Pipeline\VulkanEnginePipeline.cpp">
       <Filter>Pipeline</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Device\VulkanEngineDevice.cpp">
-      <Filter>Device</Filter>
     </ClCompile>
     <ClCompile Include="src\SwapChain\VulkanEngineSwapChain.cpp">
       <Filter>SwapChain</Filter>
@@ -66,6 +62,9 @@
     </ClCompile>
     <ClCompile Include="src\AppFramework\VulkanEngineApplication.cpp">
       <Filter>AppFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Device\VulkanDevice.cpp">
+      <Filter>Device</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
